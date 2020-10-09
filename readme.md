@@ -67,6 +67,8 @@ Your results may vary ;)
 
 You can deploy this same contract to a new NEAR TestNet account and note the `code_hash` is the same.  In this way you can be _certain_ that this Wasm binary is the _exact_ match of the one that is deployed to a NEAR account
 
+Bonus: a Python implementation is also included in the server folder
+
 ### Web
 
 1. Open the index.html file in a web browser
