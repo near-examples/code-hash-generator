@@ -84,3 +84,11 @@ You can deploy this same contract to a new NEAR TestNet account and note the `co
 --- done ---
 
 Notice that this code sample separates Wasm contract files from non-Wasm contract files as part of it's reporting output
+
+
+## Dependencies
+
+This work relies entirely on the following libraries:
+
+- https://github.com/emn178/js-sha256
+- https://github.com/45678/Base58
