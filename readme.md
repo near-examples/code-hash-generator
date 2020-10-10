@@ -57,9 +57,11 @@ Your results may vary ;)
 
 ### Server
 
-1. run `node make-code-hash contracts/greeting.wasm`
+1. Run `node src/server/make-code-hash greeting.wasm`
 
-> _Result for_
+2. Note the output in the console
+
+> _Result for `greeting.wasm`_
 >
 > A8BLJRUyRmAMBakF6JVFnSx5EGn2zA6jMhEHDzinmbwf
 
@@ -67,7 +69,7 @@ Your results may vary ;)
 
 You can deploy this same contract to a new NEAR TestNet account and note the `code_hash` is the same.  In this way you can be _certain_ that this Wasm binary is the _exact_ match of the one that is deployed to a NEAR account
 
-Bonus: a Python implementation is also included in the server folder
+*Bonus: a Python implementation is also included in the server folder*.  Usage of this script is `cat <filename> | wasm-to-codehash`
 
 ### Web
 
@@ -76,6 +78,8 @@ Bonus: a Python implementation is also included in the server folder
 2. Open your web browser developer console since output is printed to the console in this case
 
 3. Drag and drop one or more files from the `contracts/` folder onto the "Drop Zone" box on the web page
+
+4. Note the output in the browser's developer console
 
 --- done ---
 

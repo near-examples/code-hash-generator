@@ -1,4 +1,14 @@
+const qs = document.querySelector.bind(document)
+
+document.addEventListener('DOMContentLoaded', () => {
+  // ondrop="dropHandler(event);" ondragover="dragOverHandler(event);"
+  qs('#drop_zone').addEventListener('drop', dropHandler)
+  qs('#drop_zone').addEventListener('dragover', dragEnterHandler)
+  qs('#drop_zone').addEventListener('dragleave', dragLeaveHandler)
+})
+
 function dropHandler(event) {
+  dragLeaveHandler(event)
   event.preventDefault();
 
   console.log('Drag and drop detected');
@@ -76,7 +86,13 @@ function isNearContract(item) {
   return item.type === 'application/wasm'
 }
 
-function dragOverHandler(event) {
+function dragEnterHandler(event) {
   event.preventDefault();
+  qs('#drop_zone').classList.add('is_hovered')
   console.log('Detecting file(s) in drop zone ...');
+}
+
+function dragLeaveHandler(event) {
+  event.preventDefault();
+  qs('#drop_zone').classList.remove('is_hovered')
 }

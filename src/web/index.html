@@ -16,23 +16,27 @@
       display: flex;
       justify-content: center;
       align-self: center;
+      margin: 50px 0;
       width: 30vw;
-      height: 30vh;
-      border: 3px solid blue;
-      background-color: yellow;
+      height: 20vh;
+      background-color: lightgoldenrodyellow;
+    }
+
+    .is_hovered {
+      border: 3px solid red;
     }
   </style>
 </head>
 
 <body style="text-align: center">
   <h1>Calculate NEAR code_hash for a contract</h1>
-  <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+  <div id="drop_zone">
     <h2>Drag one or more files <br><br>to this Drop Zone ...</h2>
   </div>
   <hr>
 
-  <script src="js-sha256.js"></script>
-  <script src="base58.js"></script>
+  <script src="../lib/js-sha256.js"></script>
+  <script src="../lib/base58.js"></script>
   <script src="drag-drop.js"></script>
 </body>
 

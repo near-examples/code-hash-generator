@@ -97,5 +97,10 @@
     return new(typeof Uint8Array !== "undefined" && Uint8Array !== null ? Uint8Array : Buffer)(bytes.reverse());
   };
 
-  module.exports = Base58
+  if (typeof window !== 'undefined') {
+    window.Base58 = Base58
+  } else {
+    module.exports = Base58
+  }
+
 }).call(this);
